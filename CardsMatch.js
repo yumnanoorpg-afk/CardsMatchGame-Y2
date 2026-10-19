@@ -7,5 +7,5 @@ const CardsDictionary = [
     { id: 6, image: "Cards/Moon.png" },
     { id: 7, image: "Cards/Star.png" },
     { id: 8, image: "Cards/strawberry.png" },
-
+    
 ]

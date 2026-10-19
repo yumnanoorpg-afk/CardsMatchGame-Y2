@@ -31,11 +31,19 @@ p{
     font-size: 16px;
 }
 
-.grid.container{
+.grid-container{
     display: grid;
     justify-content: center;
     grid-gap: 16px;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(2,210px);
 
+} 
+
+.card {
+    padding: 10px;
+    background-color: #ab3737;
+    color: white;
+    border-radius: 10px;
+    font-size: 24px;
 }
