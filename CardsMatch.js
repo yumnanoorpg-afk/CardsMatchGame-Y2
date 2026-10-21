@@ -27,3 +27,5 @@ while (cardslist.length < 2) {
     }
 }
 
+cardslist = [...cardslist, ...cardslist]; // duplicate the cardslist to have pairs of cards
+
