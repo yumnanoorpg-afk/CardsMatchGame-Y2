@@ -1,14 +1,15 @@
-const CardsDictionary = [
-    { id: 1, image: "Cards/back.png" },
-    { id: 2, image: "Cards/Cloud.png" },
-    { id: 3, image: "Cards/cloudsAndMoon.png" },
-    { id: 4, image: "Cards/Frog.png" },
-    { id: 5, image: "Cards/Heart.png" },
-    { id: 6, image: "Cards/Moon.png" },
-    { id: 7, image: "Cards/Star.png" },
-    { id: 8, image: "Cards/strawberry.png" },
+const CardsDictionary = [,
+    { id: 1, image: "Cards/Cloud.png" },
+    { id: 2, image: "Cards/cloudsAndMoon.png" },
+    { id: 3, image: "Cards/Frog.png" },
+    { id: 4, image: "Cards/Heart.png" },
+    { id: 5, image: "Cards/Moon.png" },
+    { id: 6, image: "Cards/Star.png" },
+    { id: 7, image: "Cards/strawberry.png" },
 
 ]
+
+const backgroundImage = "Cards/back.png"; // set the background image for the cards
 
 //goal is to add items(cards) into the container randomly
 

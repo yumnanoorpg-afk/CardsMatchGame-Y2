@@ -35,8 +35,8 @@ p{
     display: grid;
     justify-content: center;
     grid-gap: 16px;
-    grid-template-columns: repeat(4, 100px);
-    grid-auto-rows: 300px;
+    grid-template-columns: repeat(4, 170px);
+    grid-auto-rows: 250px;
 
 } 
 
@@ -45,6 +45,5 @@ p{
     background-color: #ab3737;
     color: white;
     border-radius: 10px;
-    font-size: 24px;
 }
  
