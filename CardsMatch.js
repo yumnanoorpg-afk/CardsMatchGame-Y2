@@ -28,4 +28,10 @@ while (cardslist.length < 2) {
 }
 
 cardslist = [...cardslist, ...cardslist]; // duplicate the cardslist to have pairs of cards
-
+for (i in cardslist) {
+    let card = document.createElement("div");
+    card.classList.add("card"); // add the class "card" to the card element
+    card.setAttribute("data-id", cardslist[i].id);
+    card.style.backgroundImage = `url(${cardslist[i].image})`; // set the background image of the card to the image of the card in the cardslist
+    cardgrid.appendChild(card); // add the card to the cardgrid
+}
