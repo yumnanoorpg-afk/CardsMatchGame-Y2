@@ -7,5 +7,14 @@ const CardsDictionary = [
     { id: 6, image: "Cards/Moon.png" },
     { id: 7, image: "Cards/Star.png" },
     { id: 8, image: "Cards/strawberry.png" },
-    
+
 ]
+
+//goal is to add items(cards) into the container randomly
+
+const cardgrid = document.querySelector(".grid-container"); // .querySelector(".grid-container") is used to locate an element in a html document with the class "grid-container".
+
+let card = CardsDictionary[Math.floor(Math.random() * CardsDictionary.length)]; //   randomly select a card from the CardsDictionary
+
+let cardslist = []; // create an empty array to store the cards
+

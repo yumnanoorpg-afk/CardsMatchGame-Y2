@@ -7,7 +7,7 @@ body{
 
 h1{
     text-align: center;
-    font-size: 700;
+    font-size: 40px;
     margin-top: 50px;
 }
 
@@ -30,13 +30,13 @@ p{
     padding: 10px 20px;
     font-size: 16px;
 }
-
+/* recaped css grid by watching a youtube totorial (https://youtu.be/JYfiaSKeYhE?si=YK1zyooBOVIsZUPd)*/
 .grid-container{
     display: grid;
     justify-content: center;
     grid-gap: 16px;
     grid-template-columns: repeat(4, 100px);
-    grid-template-rows: repeat(2,210px);
+    grid-auto-rows: 300px;
 
 } 
 
@@ -47,3 +47,4 @@ p{
     border-radius: 10px;
     font-size: 24px;
 }
+ 
