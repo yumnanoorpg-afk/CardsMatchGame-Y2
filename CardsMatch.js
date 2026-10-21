@@ -16,5 +16,14 @@ const cardgrid = document.querySelector(".grid-container"); // .querySelector(".
 
 let card = CardsDictionary[Math.floor(Math.random() * CardsDictionary.length)]; //   randomly select a card from the CardsDictionary
 
-let cardslist = []; // create an empty array to store the cards
+let cardslist = []; 
+
+
+//
+while (cardslist.length < 2) {
+    let card = CardsDictionary[Math.floor(Math.random() * CardsDictionary.length)]; // randomly select a card from the CardsDictionary
+    if (!cardslist.includes(card)) { // check if the card is already in the cardslist
+        cardslist.push(card); // add the card to the cardslist
+    }
+}
 
