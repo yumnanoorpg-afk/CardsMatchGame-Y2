@@ -1,15 +1,15 @@
-const CardsDictionary = [,
+const CardsDictionary = [
     { id: 1, image: "Cards/Cloud.png" },
     { id: 2, image: "Cards/cloudsAndMoon.png" },
     { id: 3, image: "Cards/Frog.png" },
     { id: 4, image: "Cards/Heart.png" },
     { id: 5, image: "Cards/Moon.png" },
     { id: 6, image: "Cards/Star.png" },
-    { id: 7, image: "Cards/strawberry.png" },
+    { id: 7, image: "Cards/strawberry.png" }
 
 ]
 
-const backgroundImage = "Cards/back.png"; // set the background image for the cards
+const backImage = "Cards/back.png"; // set the background image for the cards
 
 //goal is to add items(cards) into the container randomly
 
@@ -29,10 +29,27 @@ while (cardslist.length < 2) {
 }
 
 cardslist = [...cardslist, ...cardslist]; // duplicate the cardslist to have pairs of cards
-for (i in cardslist) {
-    let card = document.createElement("div");
-    card.classList.add("card"); // add the class "card" to the card element
-    card.setAttribute("data-id", cardslist[i].id);
-    card.style.backgroundImage = `url(${cardslist[i].image})`; // set the background image of the card to the image of the card in the cardslist
-    cardgrid.appendChild(card); // add the card to the cardgrid
+cardslist = cardslist.sort(() => Math.random() - 0.5); // shuffle the cardslist randomly
+
+
+for (let i = 0; i < cardslist.length; i++) {
+    const currentCard = cardslist[i];
+    const cardElement = document.createElement("div");
+
+    cardElement.classList.add("card");
+    cardElement.setAttribute("data-id", currentCard.id);
+
+    // Set the card back
+    cardElement.style.backgroundImage = `url("${backImage}")`;
+
+    // Listen for clicks on this card
+    cardElement.addEventListener("click", function () {
+        console.log("Card clicked!", currentCard.image);
+
+        cardElement.style.backgroundImage =
+            `url("${currentCard.image}")`;
+    });
+
+    cardgrid.appendChild(cardElement);
 }
+
