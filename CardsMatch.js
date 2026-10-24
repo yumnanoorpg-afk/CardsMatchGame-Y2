@@ -15,6 +15,12 @@ const backImage = "Cards/back.png";
 // Find the container in the HTML where the cards will go
 const cardgrid = document.querySelector(".grid-container");
 
+//Find score in the HTML
+const scoreElement = document.querySelector(".score");
+
+// 
+let score = 0 ;
+
 let cardslist = [];
 
 // Randomly select 2 different cards
@@ -93,6 +99,10 @@ for (let i = 0; i < cardslist.length; i++) {
                 // Reset ready for the next pair
                 firstCard = null;
                 lockBoard = false;
+
+                // Update the score
+                score++;
+                scoreElement.textContent = `Score: ${score}`;
 
                 // Check if all pairs have been found
                 if (matchedPairs === cardslist.length / 2) {
