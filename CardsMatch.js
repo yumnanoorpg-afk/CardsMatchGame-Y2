@@ -23,113 +23,128 @@ let score = 0 ;
 
 let cardslist = [];
 
-// Randomly select 2 different cards
-while (cardslist.length < 2) {
-    let card = CardsDictionary[
-        Math.floor(Math.random() * CardsDictionary.length)
-    ];
+//Adding level 1
 
-    // Only add the card if it is not already selected
-    if (!cardslist.includes(card)) {
-        cardslist.push(card);
+function level1() {
+    // Randomly select 2 different cards
+    while (cardslist.length < 2) {
+        let card = CardsDictionary[
+            Math.floor(Math.random() * CardsDictionary.length)
+        ];
+
+        // Only add the card if it is not already selected
+        if (!cardslist.includes(card)) {
+            cardslist.push(card);
+        }
     }
 }
 
-// Duplicate the cards so each one has a matching pair
-cardslist = [...cardslist, ...cardslist];
+function game() {
+    // Duplicate the cards so each one has a matching pair
+    cardslist = [...cardslist, ...cardslist];
 
-// Shuffle the cards into a random order
-cardslist = cardslist.sort(() => Math.random() - 0.5);
-
-
-// Variables used to check whether cards match
-let firstCard = null; // Stores the first card clicked
-let matchedPairs = 0; // Counts how many pairs have been matched
-let lockBoard = false; // Stops clicks while checking a pair
+    // Shuffle the cards into a random order
+    cardslist = cardslist.sort(() => Math.random() - 0.5);
 
 
-// Loop through the list to create each card
-for (let i = 0; i < cardslist.length; i++) {
-
-    const currentCard = cardslist[i];
-
-    // Create a new HTML div for the card
-    const cardElement = document.createElement("div");
-
-    // Give the div the CSS class "card"
-    cardElement.classList.add("card");
-
-    // Store the card's ID so matching cards can be compared
-    cardElement.setAttribute("data-id", currentCard.id);
-
-    // Show the back of the card initially
-    cardElement.style.backgroundImage = `url("${backImage}")`;
+    // Variables used to check whether cards match
+    let firstCard = null; // Stores the first card clicked
+    let matchedPairs = 0; // Counts how many pairs have been matched
+    let lockBoard = false; // Stops clicks while checking a pair
 
 
-    // Run this code whenever a card is clicked
-    cardElement.addEventListener("click", function () {
+    // Loop through the list to create each card
+    for (let i = 0; i < cardslist.length; i++) {
 
-        // Ignore clicks while checking cards
-        if (lockBoard || cardElement.classList.contains("matched")) return;
+        const currentCard = cardslist[i];
 
-        // Reveal the card's image
-        cardElement.style.backgroundImage =
-            `url("${currentCard.image}")`;
+        // Create a new HTML div for the card
+        const cardElement = document.createElement("div");
+
+        // Give the div the CSS class "card"
+        cardElement.classList.add("card");
+
+        // Store the card's ID so matching cards can be compared
+        cardElement.setAttribute("data-id", currentCard.id);
+
+        // Show the back of the card initially
+        cardElement.style.backgroundImage = `url("${backImage}")`;
 
 
-        // If this is the first card clicked, remember it
-        if (firstCard === null) {
-            firstCard = cardElement;
+        // Run this code whenever a card is clicked
+        cardElement.addEventListener("click", function () {
 
-        } else {
+            // Ignore clicks while checking cards
+            if (lockBoard || cardElement.classList.contains("matched")) return;
 
-            // A second card has been clicked
-            lockBoard = true;
+            // Reveal the card's image
+            cardElement.style.backgroundImage =
+                `url("${currentCard.image}")`;
 
-            // Compare the IDs of the two cards
-            if (firstCard.dataset.id === cardElement.dataset.id) {
 
-                // The cards match, so keep them revealed
-                firstCard.classList.add("matched");
-                cardElement.classList.add("matched");
-
-                // Increase the number of matched pairs
-                matchedPairs++;
-
-                // Reset ready for the next pair
-                firstCard = null;
-                lockBoard = false;
-
-                // Update the score
-                score++;
-                scoreElement.textContent = `Score: ${score}`;
-
-                // Check if all pairs have been found
-                if (matchedPairs === cardslist.length / 2) {
-                    console.log("You win!");
-                }
+            // If this is the first card clicked, remember it
+            if (firstCard === null) {
+                firstCard = cardElement;
 
             } else {
 
-                // The cards do not match, so wait one second
-                setTimeout(function () {
+                // A second card has been clicked
+                lockBoard = true;
 
-                    // Turn both cards face down again
-                    firstCard.style.backgroundImage =
-                        `url("${backImage}")`;
+                // Compare the IDs of the two cards
+                if (firstCard.dataset.id === cardElement.dataset.id) {
 
-                    cardElement.style.backgroundImage =
-                        `url("${backImage}")`;
+                    // The cards match, so keep them revealed
+                    firstCard.classList.add("matched");
+                    cardElement.classList.add("matched");
 
-                    // Reset ready for another turn
+                    // Increase the number of matched pairs
+                    matchedPairs++;
+
+                    // Reset ready for the next pair
                     firstCard = null;
                     lockBoard = false;
 
-                }, 1000);
-            }
-        }
-    });
+                    // Update the score
+                    score++;
+                    scoreElement.textContent = `Score: ${score}`;
 
-    // Add the card to the grid on the webpage
-    cardgrid.appendChild(cardElement);
+                    // Check if all pairs have been found
+                    if (matchedPairs === cardslist.length / 2) {
+                        console.log("You win!");
+                    }
+
+                } else {
+
+                    // The cards do not match, so wait one second
+                    setTimeout(function () {
+
+                        // Turn both cards face down again
+                        firstCard.style.backgroundImage =
+                            `url("${backImage}")`;
+
+                        cardElement.style.backgroundImage =
+                            `url("${backImage}")`;
+
+                        // Reset ready for another turn
+                        firstCard = null;
+                        lockBoard = false;
+
+                    }, 1000);
+                }
+            }
+        });
+
+        // Add the card to the grid on the webpage
+        cardgrid.appendChild(cardElement);
+    }
 }
+
+
+function main() {
+    level1();
+    game();
+}
+
+
+main();
