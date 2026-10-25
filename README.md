@@ -1,5 +1,12 @@
+Overview: 
+This project will focus on making a classic card matching game using JavaScript. 
+The game will work like so:
+The user will be presented with multiple hidden pairs.
+The user will select 2 of the hidden items.
+If they match then, the user scores a point.
+If they do not match, the cards are hidden again.
 
-a description of the project and its purpose;
+
 o the target user and at least one user profile;
 o user requirements;
 o functional and non-functional system requirements;
