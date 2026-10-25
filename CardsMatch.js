@@ -127,18 +127,24 @@ function game() {
                     scoreElement.textContent = `Score: ${score}`;
 
                     // Check if all pairs have been found
+                    
+                    // Check if all pairs have been found
                     if (matchedPairs === cardslist.length / 2) {
+                        setTimeout(function () {
 
-                        // Move to the next level
-                        currentLevel++;
+                            // Move to the next level
+                            currentLevel++;
 
-                        if (currentLevel < levels.length) {
-                            setTimeout(gameLevels, 1000);
-                        } 
-                        else {
-                            alert("You completed all levels!");
-                        }
+                            if (currentLevel < levels.length) {
+                                gameLevels();
+                            } 
+                            else {
+                                alert("You completed all levels!");
+                            }
+
+                        }, 1000);
                     }
+
 
                 } else {
 
