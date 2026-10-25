@@ -1,4 +1,3 @@
-
 const CardsDictionary = [
     { id: 1, image: "Cards/Cloud.png" },
     { id: 2, image: "Cards/cloudsAndMoon.png" },
@@ -23,11 +22,19 @@ let score = 0 ;
 
 let cardslist = [];
 
-//Adding level 1
+let currentLevel = 0;
 
-function level1() {
-    // Randomly select 2 different cards
-    while (cardslist.length < 2) {
+// Number of pairs in each level
+const levels = [2, 4];
+
+//Adding level 1 and the other levels
+
+function gameLevels() {
+    // Reset the cards for the new level
+    cardslist = [];
+
+    // Randomly select different cards for this level
+    while (cardslist.length < levels[currentLevel]) {
         let card = CardsDictionary[
             Math.floor(Math.random() * CardsDictionary.length)
         ];
@@ -37,6 +44,12 @@ function level1() {
             cardslist.push(card);
         }
     }
+
+    // Clear the previous level's cards
+    cardgrid.innerHTML = "";
+
+    // Start the game
+    game();
 }
 
 function game() {
@@ -75,7 +88,11 @@ function game() {
         cardElement.addEventListener("click", function () {
 
             // Ignore clicks while checking cards
-            if (lockBoard || cardElement.classList.contains("matched")) return;
+            if (
+                lockBoard ||
+                cardElement.classList.contains("matched") ||
+                cardElement === firstCard
+            ) return;
 
             // Reveal the card's image
             cardElement.style.backgroundImage =
@@ -111,7 +128,16 @@ function game() {
 
                     // Check if all pairs have been found
                     if (matchedPairs === cardslist.length / 2) {
-                        console.log("You win!");
+
+                        // Move to the next level
+                        currentLevel++;
+
+                        if (currentLevel < levels.length) {
+                            setTimeout(gameLevels, 1000);
+                        } 
+                        else {
+                            alert("You completed all levels!");
+                        }
                     }
 
                 } else {
@@ -141,10 +167,5 @@ function game() {
 }
 
 
-function main() {
-    level1();
-    game();
-}
-
-
-main();
+// Start the first level
+gameLevels();
