@@ -7,50 +7,51 @@ The target audience is people of all ages, so the game should be simple to under
 
 Person 1: Young Child
 
-Age: 8
+- Age: 8
 
-Lifestyle: The user is a primary school student who enjoys playing games. They may have a short attention span and prefer activities that are fun, simple and easy to understand.
+- Lifestyle: The user is a primary school student who enjoys playing games. They may have a short attention span and prefer activities that are fun, simple and easy to understand.
 
-Requirements: The user wants a colourful and enjoyable game with simple instructions and easy-to-recognise symbols. The cards should be large enough to select easily by tapping the screen.
+- Requirements: The user wants a colourful and enjoyable game with simple instructions and easy-to-recognise symbols. The cards should be large enough to select easily by tapping the screen.
 
 Person 2: Teenager
 
-Age: 16
+- Age: 16
 
-Lifestyle: The user is a secondary school student who may spend their free time playing video games, using social media and browsing the internet. They enjoy activities that challenge their skills and provide opportunities to improve and compete against their previous results.
+- Lifestyle: The user is a secondary school student who may spend their free time playing video games, using social media and browsing the internet. They enjoy activities that challenge their skills and provide opportunities to improve and compete against their previous results.
 
-Requirements: The user wants a quick and engaging game that challenges their memory. They would like the option to restart the game and improve their performance by finding matching pairs more efficiently.
+- Requirements: The user wants a quick and engaging game that challenges their memory. They would like the option to restart the game and improve their performance by finding matching pairs more efficiently.
 
 Person 3: Older Adult
 
-Age: 65
+- Age: 65
 
-Lifestyle: The user may be retired or working part-time and may enjoy relaxing activities during their free time, such as puzzles, reading or spending time with family. They may use a computer, tablet or smartphone for entertainment and prefer technology that is straightforward to use.
+- Lifestyle: The user may be retired or working part-time and may enjoy relaxing activities during their free time, such as puzzles, reading or spending time with family. They may use a computer, tablet or smartphone for entertainment and prefer technology that is straightforward to use.
 
-Requirements: The user wants a relaxing and easy-to-play game with readable text, clear card symbols and simple controls. The score should be displayed clearly so they can easily track their progress.
+- Requirements: The user wants a relaxing and easy-to-play game with readable text, clear card symbols and simple controls. The score should be displayed clearly so they can easily track their progress.
 
+##Functional and Non-Functional Requirements
 Functional requirements:
 
--The game should create a set of cards containing matching pairs.
--The cards should be shuffled at the beginning of each game so that the pairs appear in different positions.
--All cards should start face down so the player cannot see the symbols.
--The player should be able to click or tap a card to reveal its symbol.
--The player should only be able to select two cards at a time.
--If the cards match, they should stay visible and the player's score should increase by one point.
--If the cards do not match, they should turn face down again after a short delay.
--The game should stop the player from selecting more cards while two mismatched cards are being checked.
--The game should display the player's score and show how many pairs have been found.
--When all the pairs have been matched, the game should display a message congratulating the player.
+- The game should create a set of cards containing matching pairs.
+- The cards should be shuffled at the beginning of each game so that the pairs appear in different positions.
+- All cards should start face down so the player cannot see the symbols.
+- The player should be able to click or tap a card to reveal its symbol.
+- The player should only be able to select two cards at a time.
+- If the cards match, they should stay visible and the player's score should increase by one point.
+- If the cards do not match, they should turn face down again after a short delay.
+- The game should stop the player from selecting more cards while two mismatched cards are being checked.
+- The game should display the player's score and show how many pairs have been found.
+- When all the pairs have been matched, the game should display a message congratulating the player.
 
 Non-Functional requirements:
--The game should have a simple and colourful design that is suitable for people of all ages.
--The instructions should be clear and easy to understand, even for someone who has never played the game before.
--The cards and buttons should be large enough to select easily using a mouse or touchscreen.
--The text and symbols should be clear and easy to see, with good contrast between the colours.
--The game should respond quickly when a player selects a card so that gameplay feels smooth.
+- The game should have a simple and colourful design that is suitable for people of all ages.
+- The instructions should be clear and easy to understand, even for someone who has never played the game before.
+- The cards and buttons should be large enough to select easily using a mouse or touchscreen.
+- The text and symbols should be clear and easy to see, with good contrast between the colours.
+- The game should respond quickly when a player selects a card so that gameplay feels smooth.
 
 
-Sucess criteria and Test plan:
+##Success criteria and Test plan:
 
 | Test ID | Test Input / Action | Expected Output | Actual Output | Result |
 |---|---|---|---|---|
@@ -65,9 +66,12 @@ Sucess criteria and Test plan:
 | 9 | Complete the final level | All cards disappear and "You Won!!" appears in the centre of the screen. | | |
 | 10 | Make a non-matching pair when the score is 0 | The score remains at 0 and does not become negative. |  | |
 
+##Design: 
 
+<img width="1015" height="501" alt="image" src="https://github.com/user-attachments/assets/b8c1652a-3c8d-411f-b51b-d783b0c291f2" />
 
 ##Game Flow chart:
+
 <img width="712" height="747" alt="image" src="https://github.com/user-attachments/assets/32b96586-cb6b-4c6a-8b93-966859527dea" />
 
 
