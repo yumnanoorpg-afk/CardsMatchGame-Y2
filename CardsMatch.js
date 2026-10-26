@@ -25,7 +25,7 @@ let cardslist = [];
 let currentLevel = 0;
 
 // Number of pairs in each level
-const levels = [2, 4 , 4 , 6, 6, 8]; 
+const levels = [2, 4 , 4 , 6]; 
 
 //Adding level 1 and the other levels
 
@@ -137,9 +137,19 @@ function game() {
 
                             if (currentLevel < levels.length) {
                                 gameLevels();
-                            } 
+                            }
                             else {
-                                alert("You completed all levels!");
+                                cardgrid.innerHTML = "";
+
+                                // Add a class to change the grid layout
+                                cardgrid.classList.add("game-won");
+
+                                // Create the winning paragraph
+                                const winMessage = document.createElement("p");
+                                winMessage.textContent = "You Won!!";
+                                winMessage.classList.add("win-message");
+
+                                cardgrid.appendChild(winMessage);
                             }
 
                         }, 1000);
@@ -176,6 +186,8 @@ function game() {
         cardgrid.appendChild(cardElement);
     }
 }
+
+
 
 
 // Start the first level
