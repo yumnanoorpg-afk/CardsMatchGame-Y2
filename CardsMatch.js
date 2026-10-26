@@ -25,7 +25,7 @@ let cardslist = [];
 let currentLevel = 0;
 
 // Number of pairs in each level
-const levels = [2, 4];
+const levels = [2, 4 , 4 , 6, 6, 8]; 
 
 //Adding level 1 and the other levels
 
@@ -158,10 +158,15 @@ function game() {
                         cardElement.style.backgroundImage =
                             `url("${backImage}")`;
 
+                        if (score > 0){
+                            score--;
+                            scoreElement.textContent = `Score: ${score}`;
+                        }
+                        
                         // Reset ready for another turn
                         firstCard = null;
                         lockBoard = false;
-
+                        
                     }, 1000);
                 }
             }
