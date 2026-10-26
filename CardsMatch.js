@@ -25,7 +25,7 @@ let cardslist = [];
 let currentLevel = 0;
 
 // Number of pairs in each level
-const levels = [2, 4 , 4 , 6]; 
+const levels = [2, 4 , 4 , 6 , 6 , 8 ]; 
 
 //Adding level 1 and the other levels
 
