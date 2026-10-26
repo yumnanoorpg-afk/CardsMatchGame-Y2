@@ -31,6 +31,7 @@ Person 3: Older Adult
 - Requirements: The user wants a relaxing and easy-to-play game with readable text, clear card symbols and simple controls. The score should be displayed clearly so they can easily track their progress.
 
 ##Functional and Non-Functional Requirements
+
 Functional requirements:
 
 - The game should create a set of cards containing matching pairs.
@@ -76,10 +77,6 @@ Non-Functional requirements:
 <img width="712" height="747" alt="image" src="https://github.com/user-attachments/assets/32b96586-cb6b-4c6a-8b93-966859527dea" />
 
 
-##Key Decisions made:
-Several design decisions were made to make the Pairs Game easy to use and enjoyable for the player. A grid layout was chosen to organise the cards neatly and make them easy to select. Images were used instead of text on the cards to make the game more visual and engaging. The cards are shuffled randomly at the beginning of each level so that their positions are different each time, making the game less predictable. Multiple levels were included, with the number of pairs increasing as the player progresses, to gradually increase the difficulty and challenge the player's memory. A scoring system was added to reward the player for finding matching pairs and deduct points for incorrect matches, encouraging the player to improve their performance. A short delay was included before mismatched cards turn face down again, giving the player enough time to see the images. Finally, a winning message appears in the centre of the screen when all levels are completed, providing clear feedback that the player has successfully finished the game. A pink background was chosen to create a consistent appearance and make the game visually appealing.
-
-o examples of errors identified, fixes made and retesting;
 
 
 
@@ -87,24 +84,31 @@ o examples of errors identified, fixes made and retesting;
 
 | Test ID | Test Input / Action | Expected Output | Actual Output | Result |
 |---|---|---|---|---|
-| 1 | Open the game | The title, instructions, cards and score are displayed. | The game loads correctly with all elements visible. | Pass |
-| 2 | Click on a card | The card's image is revealed. | The selected card's image is revealed. | Pass |
-| 3 | Click two matching cards | Both cards remain visible and the score increases by 1. | Both cards remain visible and the score increases by 1. | Pass |
-| 4 | Click two non-matching cards | Both cards turn face down after a short delay. The score decreases by 1 if above 0. | Both cards turn face down and the score decreases if above 0. | Pass |
-| 5 | Click the same card twice | The second click is ignored. | The second click is ignored. | Pass |
-| 6 | Click another card while two cards are being checked | Further clicks are ignored until the comparison is complete. | Further clicks are ignored during the comparison. | Pass |
-| 7 | Match all pairs in a level | The next level loads with a new selection of cards. | The next level loads correctly. | Pass |
+| 1 | Open the game | The title, instructions, cards and score are displayed. | The game loads correctly with all elements visible. <img width="1102" height="776" alt="image" src="https://github.com/user-attachments/assets/7fd650e2-c07e-494c-8409-b3a9bde57ac3" />
+ | Pass |
+| 2 | Click on a card | The card's image is revealed. | The selected card's image is revealed. <img width="1070" height="677" alt="image" src="https://github.com/user-attachments/assets/548a2427-1039-49d0-99be-15826bd1e9ff" />
+ | Pass |
+| 3 | Click two matching cards | Both cards remain visible and the score increases by 1. | Both cards remain visible and the score increases by 1. <img width="1025" height="726" alt="image" src="https://github.com/user-attachments/assets/92bbc89f-870f-4e4c-8f3f-f0059855cca7" />
+ | Pass |
+| 4 | Click two non-matching cards | Both cards turn face down after a short delay. The score decreases by 1 if above 0. | Both cards turn face down and the score decreases if above 0. <img width="1041" height="636" alt="image" src="https://github.com/user-attachments/assets/b089b6b5-0595-4f51-a9d4-5c4c3ba6df58" />
+| Pass |
+| 5 | Click the same card twice | The second click is ignored. | The second click is ignored. <img width="1061" height="641" alt="image" src="https://github.com/user-attachments/assets/04a4b295-0ad5-492e-a65d-e4b630bc3e52" />
+| Pass |
+| 6 | Click another card while two cards are being checked | Further clicks are ignored until the comparison is complete. | Further clicks are ignored during the comparison.<img width="1002" height="826" alt="image" src="https://github.com/user-attachments/assets/8079ed27-9d5c-4142-b74d-d05aeb2c0cd7" />
+ | Pass |
+| 7 | Match all pairs in a level | The next level loads with a new selection of cards. | The next level loads correctly.<img width="1002" height="826" alt="image" src="https://github.com/user-attachments/assets/2f64ac63-2ac8-4c21-8b4a-cb71072dc48b" />
+| Pass |
 | 8 | Complete all six levels | The game progresses through all six levels. | All six levels can be completed. | Pass |
-| 9 | Complete the final level | All cards disappear and "You Won!!" appears in the centre of the screen. | All cards disappear and the winning message appears. | Pass |
+| 9 | Complete the final level | All cards disappear and "You Won!!" appears in the centre of the screen. | All cards disappear and the winning message appears.<img width="796" height="612" alt="image" src="https://github.com/user-attachments/assets/20803b7a-47e6-4b29-b4c3-ea24cacc3d6c" />
+ | Pass |
 | 10 | Make a non-matching pair when the score is 0 | The score remains at 0 and does not become negative. | The score remains at 0. | Pass |
 
-##Evaluation and Review
-Evaluation
-The completed Pairs Game meets its main requirements because players can reveal cards, find matching pairs, earn points and progress through six levels. The cards are randomly selected and shuffled at the beginning of each level, making the game less predictable and encouraging players to use their memory. The scoring system rewards correct matches and deducts points for incorrect matches, while preventing the score from falling below zero. Once all levels have been completed, the cards disappear and a "You Won!!" message appears in the centre of the screen. Overall, the game meets its main objectives, although adding a restart button, a level indicator and a timer would improve the user experience.
+##Evaluation
+The completed Pairs Game meets its main requirements because players can reveal cards, find matching pairs, earn points and progress through six levels. The cards are randomly selected and shuffled at the beginning of each level, making the game less predictable and encouraging players to use their memory. The scoring system rewards correct matches and deducts points for incorrect matches, while preventing the score from falling below zero. Once all levels have been completed, the cards disappear and a "You Won!!" message appears in the centre of the screen. Overall, the game meets its main objectives and provides a playable memory game. However, adding a restart button, a level indicator and a timer could improve the experience by allowing players to track their progress and challenge themselves further.
 
+One of the main strengths of the game is its simple design, which makes it easy to understand without needing complicated instructions. The use of images makes the game more visual and engaging, while the increasing number of pairs across the levels gradually increases the difficulty. The scoring system also gives players feedback on their performance and encourages them to find more matches. However, the game has some limitations, including the lack of a restart button, a high-score system and a timer. The fixed card sizes may also make the layout difficult to use on smaller screens. These limitations could be addressed in future development by making the layout responsive and adding features that encourage players to replay the game.
 
-One of the main strengths of the game is its simple design, which makes it easy to understand and play. The increasing number of pairs across the levels provides a greater challenge, while the scoring system gives players feedback on their performance. However, the game has some limitations, including the lack of a restart button, a high-score system and a timer. The fixed card sizes may also make the layout difficult to use on smaller screens. These improvements could make the game more engaging and accessible on different devices.
+##Key Decisions Made
+Several design decisions were made to make the Pairs Game easy to use, visually appealing and enjoyable for the player. A grid layout was chosen to organise the cards neatly and ensure that they could be selected easily. Images were used instead of text because the game is based on visual memory, making it more engaging for the player. Random card selection was implemented so that the same images would not be selected more than once within a level, while shuffling the duplicated cards ensured that matching pairs would appear in different positions. Six levels were included, with the number of pairs increasing as the player progresses, to gradually increase the difficulty. A scoring system was added to reward correct matches and deduct points for incorrect matches, with a condition to prevent the score from becoming negative. A short delay was also included before mismatched cards turn face down again, giving the player enough time to view the images and remember their positions. The lockBoard variable was used to prevent additional clicks while two cards were being checked, helping to avoid problems with the matching process. A pink background was chosen to create a consistent appearance and make the game visually appealing. Finally, a winning message was designed to appear in the centre of the screen after all levels were completed, providing clear feedback that the player had successfully finished the game. These decisions helped create a game that was straightforward to use while still providing a challenge.
 
-
-During development, the HTML, CSS and JavaScript were kept in separate files to make the code easier to organise and maintain. Functions such as gameLevels() and game() helped separate level setup from the main gameplay. Several problems were encountered during development, including making sure that cards were selected randomly without repeating the same image within a level, preventing players from clicking additional cards while a pair was being checked, and ensuring that the score did not fall below zero. These issues were handled using a loop to select unique cards, a lockBoard variable to control clicks and a condition to prevent the score from decreasing when it was already zero. Another challenge was getting the winning message to appear correctly after all six levels had been completed. This was resolved by clearing the card grid and displaying a "You Won!!" paragraph, with CSS adjustments to position it in the centre of the screen. Retesting helped check that matching, scoring, level progression and the winning screen worked as intended.
-
+During development, the HTML, CSS and JavaScript were kept in separate files to make the code easier to organise, understand and maintain. The gameLevels() function was used to select the cards required for each level and clear the previous grid, while the game() function handled card duplication, shuffling, displaying the cards and checking matches. This separation helped organise the program into smaller tasks. Several challenges were encountered, including ensuring that the correct number of unique images was selected for each level, preventing additional card clicks while a pair was being checked, and making sure that the score did not fall below zero. These problems were addressed using a loop to select unique cards, the lockBoard variable to control card selection and a condition to check the score before deducting points. Another issue occurred when the winning message did not appear as intended after the final level. 
