@@ -65,10 +65,9 @@ Sucess criteria and Test plan:
 | 9 | Complete the final level | All cards disappear and "You Won!!" appears in the centre of the screen. | | |
 | 10 | Make a non-matching pair when the score is 0 | The score remains at 0 and does not become negative. |  | |
 
-**Conclusion:** The black-box tests check the main features of the game, including card selection, matching, scoring, level progression and the winning screen.
 
 
-Game Flow shart:
+##Game Flow chart:
 <img width="712" height="747" alt="image" src="https://github.com/user-attachments/assets/32b96586-cb6b-4c6a-8b93-966859527dea" />
 
 
