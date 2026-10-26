@@ -29,6 +29,28 @@ Lifestyle: The user may be retired or working part-time and may enjoy relaxing a
 
 Requirements: The user wants a relaxing and easy-to-play game with readable text, clear card symbols and simple controls. The score should be displayed clearly so they can easily track their progress.
 
+Functional requirements:
+
+-The game should create a set of cards containing matching pairs.
+-The cards should be shuffled at the beginning of each game so that the pairs appear in different positions.
+-All cards should start face down so the player cannot see the symbols.
+-The player should be able to click or tap a card to reveal its symbol.
+-The player should only be able to select two cards at a time.
+-If the cards match, they should stay visible and the player's score should increase by one point.
+-If the cards do not match, they should turn face down again after a short delay.
+-The game should stop the player from selecting more cards while two mismatched cards are being checked.
+-The game should display the player's score and show how many pairs have been found.
+-When all the pairs have been matched, the game should display a message congratulating the player.
+
+Non-Functional requirements:
+-The game should have a simple and colourful design that is suitable for people of all ages.
+-The instructions should be clear and easy to understand, even for someone who has never played the game before.
+-The cards and buttons should be large enough to select easily using a mouse or touchscreen.
+-The text and symbols should be clear and easy to see, with good contrast between the colours.
+-The game should respond quickly when a player selects a card so that gameplay feels smooth.
+
+
+
 o user requirements;
 o functional and non-functional system requirements;
 o design evidence, including mock-ups, pseudocode and diagrams;
