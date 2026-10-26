@@ -1,4 +1,5 @@
-Project Overview: 
+##Project Overview: 
+
 The aim of this project is to develop a classic card matching game using JavaScript, HTML and CSS. The game will test the player's memory by asking them to find matching pairs of hidden cards.
 
 At the start of the game, all cards will be placed face down. The player will select two cards to reveal their contents. If the cards match, they will remain visible and the player's score will increase by one point. If the cards do not match, they will be hidden again after a short delay.
@@ -75,41 +76,35 @@ Non-Functional requirements:
 <img width="712" height="747" alt="image" src="https://github.com/user-attachments/assets/32b96586-cb6b-4c6a-8b93-966859527dea" />
 
 
-
-o design evidence, including mock-ups, pseudocode and diagrams;
-o annotated screenshots of the main features;
-Key Decisions made:
+##Key Decisions made:
 Several design decisions were made to make the Pairs Game easy to use and enjoyable for the player. A grid layout was chosen to organise the cards neatly and make them easy to select. Images were used instead of text on the cards to make the game more visual and engaging. The cards are shuffled randomly at the beginning of each level so that their positions are different each time, making the game less predictable. Multiple levels were included, with the number of pairs increasing as the player progresses, to gradually increase the difficulty and challenge the player's memory. A scoring system was added to reward the player for finding matching pairs and deduct points for incorrect matches, encouraging the player to improve their performance. A short delay was included before mismatched cards turn face down again, giving the player enough time to see the images. Finally, a winning message appears in the centre of the screen when all levels are completed, providing clear feedback that the player has successfully finished the game. A pink background was chosen to create a consistent appearance and make the game visually appealing.
-o a test plan and evidence of testing;
+
 o examples of errors identified, fixes made and retesting;
-o references and credits where appropriate.
+
 
 
 ##Final Testing:
 
 | Test ID | Test Input / Action | Expected Output | Actual Output | Result |
 |---|---|---|---|---|
-| BB01 | Open the game | The title, instructions, cards and score are displayed. | The game loads correctly with all elements visible. | Pass |
-| BB02 | Click on a card | The card's image is revealed. | The selected card's image is revealed. | Pass |
-| BB03 | Click two matching cards | Both cards remain visible and the score increases by 1. | Both cards remain visible and the score increases by 1. | Pass |
-| BB04 | Click two non-matching cards | Both cards turn face down after a short delay. The score decreases by 1 if above 0. | Both cards turn face down and the score decreases if above 0. | Pass |
-| BB05 | Click the same card twice | The second click is ignored. | The second click is ignored. | Pass |
-| BB06 | Click another card while two cards are being checked | Further clicks are ignored until the comparison is complete. | Further clicks are ignored during the comparison. | Pass |
-| BB07 | Match all pairs in a level | The next level loads with a new selection of cards. | The next level loads correctly. | Pass |
-| BB08 | Complete all six levels | The game progresses through all six levels. | All six levels can be completed. | Pass |
-| BB09 | Complete the final level | All cards disappear and "You Won!!" appears in the centre of the screen. | All cards disappear and the winning message appears. | Pass |
-| BB10 | Make a non-matching pair when the score is 0 | The score remains at 0 and does not become negative. | The score remains at 0. | Pass |
+| 1 | Open the game | The title, instructions, cards and score are displayed. | The game loads correctly with all elements visible. | Pass |
+| 2 | Click on a card | The card's image is revealed. | The selected card's image is revealed. | Pass |
+| 3 | Click two matching cards | Both cards remain visible and the score increases by 1. | Both cards remain visible and the score increases by 1. | Pass |
+| 4 | Click two non-matching cards | Both cards turn face down after a short delay. The score decreases by 1 if above 0. | Both cards turn face down and the score decreases if above 0. | Pass |
+| 5 | Click the same card twice | The second click is ignored. | The second click is ignored. | Pass |
+| 6 | Click another card while two cards are being checked | Further clicks are ignored until the comparison is complete. | Further clicks are ignored during the comparison. | Pass |
+| 7 | Match all pairs in a level | The next level loads with a new selection of cards. | The next level loads correctly. | Pass |
+| 8 | Complete all six levels | The game progresses through all six levels. | All six levels can be completed. | Pass |
+| 9 | Complete the final level | All cards disappear and "You Won!!" appears in the centre of the screen. | All cards disappear and the winning message appears. | Pass |
+| 10 | Make a non-matching pair when the score is 0 | The score remains at 0 and does not become negative. | The score remains at 0. | Pass |
+
+##Evaluation and Review
+Evaluation
+The completed Pairs Game meets its main requirements because players can reveal cards, find matching pairs, earn points and progress through six levels. The cards are randomly selected and shuffled at the beginning of each level, making the game less predictable and encouraging players to use their memory. The scoring system rewards correct matches and deducts points for incorrect matches, while preventing the score from falling below zero. Once all levels have been completed, the cards disappear and a "You Won!!" message appears in the centre of the screen. Overall, the game meets its main objectives, although adding a restart button, a level indicator and a timer would improve the user experience.
 
 
-Part B – Evaluation and Review
-1. A critical evaluation of how well the completed application meets the requirements.
-2. Discussion of the project’s overall success, strengths and limitations.
-3. Reflection on the development process, including key decisions, challenges and improvements.
-4. Analysis of at least one significant technical problem and how it was resolved.
-5. Comparison of the development approaches considered and justification of the approach selected.
-6. Comparison of relevant current and emerging browser-based development technologies.
-7. Comparison of the tools and design methods used during the project and justification of their suitability.
-8. A professional-development reflection based on the approved JavaScript course, explaining what was learned and how it was applied.
-9. Harvard-formatted references and credits where appropriate.
-You must also provide evidence of completing the approved JavaScript course, such as a screenshot or certificate showing your name, the course
-or modules completed and the completion date.
+One of the main strengths of the game is its simple design, which makes it easy to understand and play. The increasing number of pairs across the levels provides a greater challenge, while the scoring system gives players feedback on their performance. However, the game has some limitations, including the lack of a restart button, a high-score system and a timer. The fixed card sizes may also make the layout difficult to use on smaller screens. These improvements could make the game more engaging and accessible on different devices.
+
+
+During development, the HTML, CSS and JavaScript were kept in separate files to make the code easier to organise and maintain. Functions such as gameLevels() and game() helped separate level setup from the main gameplay. Several problems were encountered during development, including making sure that cards were selected randomly without repeating the same image within a level, preventing players from clicking additional cards while a pair was being checked, and ensuring that the score did not fall below zero. These issues were handled using a loop to select unique cards, a lockBoard variable to control clicks and a condition to prevent the score from decreasing when it was already zero. Another challenge was getting the winning message to appear correctly after all six levels had been completed. This was resolved by clearing the card grid and displaying a "You Won!!" paragraph, with CSS adjustments to position it in the centre of the screen. Retesting helped check that matching, scoring, level progression and the winning screen worked as intended.
+
