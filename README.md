@@ -50,15 +50,53 @@ Non-Functional requirements:
 -The game should respond quickly when a player selects a card so that gameplay feels smooth.
 
 
+Sucess criteria and Test plan:
 
-o user requirements;
-o functional and non-functional system requirements;
+| Test ID | Test Input / Action | Expected Output | Actual Output | Result |
+|---|---|---|---|---|
+| 1 | Open the game | The title, instructions, cards and score are displayed. |  |  |
+| 2 | Click on a card | The card's image is revealed. | |  |
+| 3 | Click two matching cards | Both cards remain visible and the score increases by 1. | |  |
+| 4 | Click two non-matching cards | Both cards turn face down after a short delay. The score decreases by 1 if above 0. |  |  |
+| 5 | Click the same card twice | The second click is ignored. |  ||
+| 6 | Click another card while two cards are being checked | Further clicks are ignored until the comparison is complete. |  |  |
+| 7 | Match all pairs in a level | The next level loads with a new selection of cards. |  | |
+| 8 | Complete all six levels | The game progresses through all six levels. | |  |
+| 9 | Complete the final level | All cards disappear and "You Won!!" appears in the centre of the screen. | | |
+| 10 | Make a non-matching pair when the score is 0 | The score remains at 0 and does not become negative. |  | |
+
+**Conclusion:** The black-box tests check the main features of the game, including card selection, matching, scoring, level progression and the winning screen.
+
+
+Game Flow shart:
+<img width="712" height="747" alt="image" src="https://github.com/user-attachments/assets/32b96586-cb6b-4c6a-8b93-966859527dea" />
+
+
+
 o design evidence, including mock-ups, pseudocode and diagrams;
 o annotated screenshots of the main features;
-o explanations of important implementation decisions;
+Key Decisions made:
+Several design decisions were made to make the Pairs Game easy to use and enjoyable for the player. A grid layout was chosen to organise the cards neatly and make them easy to select. Images were used instead of text on the cards to make the game more visual and engaging. The cards are shuffled randomly at the beginning of each level so that their positions are different each time, making the game less predictable. Multiple levels were included, with the number of pairs increasing as the player progresses, to gradually increase the difficulty and challenge the player's memory. A scoring system was added to reward the player for finding matching pairs and deduct points for incorrect matches, encouraging the player to improve their performance. A short delay was included before mismatched cards turn face down again, giving the player enough time to see the images. Finally, a winning message appears in the centre of the screen when all levels are completed, providing clear feedback that the player has successfully finished the game. A pink background was chosen to create a consistent appearance and make the game visually appealing.
 o a test plan and evidence of testing;
 o examples of errors identified, fixes made and retesting;
 o references and credits where appropriate.
+
+
+##Final Testing:
+
+| Test ID | Test Input / Action | Expected Output | Actual Output | Result |
+|---|---|---|---|---|
+| BB01 | Open the game | The title, instructions, cards and score are displayed. | The game loads correctly with all elements visible. | Pass |
+| BB02 | Click on a card | The card's image is revealed. | The selected card's image is revealed. | Pass |
+| BB03 | Click two matching cards | Both cards remain visible and the score increases by 1. | Both cards remain visible and the score increases by 1. | Pass |
+| BB04 | Click two non-matching cards | Both cards turn face down after a short delay. The score decreases by 1 if above 0. | Both cards turn face down and the score decreases if above 0. | Pass |
+| BB05 | Click the same card twice | The second click is ignored. | The second click is ignored. | Pass |
+| BB06 | Click another card while two cards are being checked | Further clicks are ignored until the comparison is complete. | Further clicks are ignored during the comparison. | Pass |
+| BB07 | Match all pairs in a level | The next level loads with a new selection of cards. | The next level loads correctly. | Pass |
+| BB08 | Complete all six levels | The game progresses through all six levels. | All six levels can be completed. | Pass |
+| BB09 | Complete the final level | All cards disappear and "You Won!!" appears in the centre of the screen. | All cards disappear and the winning message appears. | Pass |
+| BB10 | Make a non-matching pair when the score is 0 | The score remains at 0 and does not become negative. | The score remains at 0. | Pass |
+
 
 Part B – Evaluation and Review
 1. A critical evaluation of how well the completed application meets the requirements.
